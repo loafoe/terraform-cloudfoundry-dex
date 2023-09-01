@@ -48,5 +48,5 @@ No modules.
 
 | Name | Description |
 |------|-------------|
-| <a name="output_dex_endpoint"></a> [dex\_endpoint](#output\_dex\_endpoint) | The Caddy proxy endpoint |
+| <a name="output_dex_endpoint"></a> [dex\_endpoint](#output\_dex\_endpoint) | The Dex endpoint |
 <!-- END_TF_DOCS -->
