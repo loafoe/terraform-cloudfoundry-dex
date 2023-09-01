@@ -46,5 +46,5 @@ variable "dex_image" {
 variable "issuer" {
   type        = string
   description = "Issuer"
-  default     = "http://127.0.0.1:5556/dex"
+  default     = ""
 }

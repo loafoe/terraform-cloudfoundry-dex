@@ -1,3 +1,7 @@
+locals {
+  issuer = var.issuer != "" ? var.issuer : "https://${cloudfoundry_route.dex.endpoint}"
+}
+
 resource "cloudfoundry_app" "dex" {
   name         = "tf-dex-${var.name_postfix}"
   space        = var.cf_space_id
@@ -11,7 +15,7 @@ resource "cloudfoundry_app" "dex" {
 
   environment = merge({
     DEXCONFIG_BASE64 = base64encode(templatefile("${path.module}/templates/config.yaml", {
-      issuer = var.issuer
+      issuer = local.issuer
     }))
   }, {})
 
